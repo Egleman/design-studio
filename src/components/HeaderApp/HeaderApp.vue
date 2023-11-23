@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="`header ${activeClass}`" ref="headerRef">
     <div class="container">
       <div class="header__wrapper">
         <a href="#" class="header__burger">
@@ -23,4 +23,27 @@
 </template>
 <script setup lang="ts">
 import headerLogo from "@/assets/images/icons/header-logo.svg";
+import {onMounted, onUnmounted, ref} from "vue";
+import { useMinWidthBody } from "@/customHook/useMinWidthBody";
+
+const headerRef = ref<HTMLElement | null>(null);
+const { scrollWidth } = useMinWidthBody();
+const activeClass = ref('');
+const checkPositionScroll = () => {
+  if (window.scrollY > 0) {
+    activeClass.value = 'active';
+  }
+  if (window.scrollY === 0) {
+    activeClass.value = '';
+  }
+}
+onMounted(() => {
+  if (headerRef.value) {
+    headerRef.value.style.minWidth = `${320 - scrollWidth}px`;
+  }
+  window.addEventListener('scroll', checkPositionScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkPositionScroll);
+})
 </script>

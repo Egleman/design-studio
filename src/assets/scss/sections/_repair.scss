@@ -1,0 +1,68 @@
+.repair {
+  padding: 100px 0;
+  background: url("../images/backgrounds/repair-bg.jpeg") center/cover no-repeat;
+  &__title {
+    text-align: center;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px; /* 114.286% */
+    margin-bottom: 40px;
+  }
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    &-link {
+      color: #767676;
+      text-align: center;
+      font-family: "Tenor Sans", sans-serif;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 62.5px; /* 125% */
+      text-decoration-line: underline;
+      display: flex;
+      padding: 25px 50px;
+      border-radius: 50%;
+      text-underline-offset: 20px;
+      transition: .3s all;
+      &:hover {
+        text-decoration-line: underline;
+        color: black;
+      }
+    }
+    &-link.active {
+      color: #fff;
+      text-decoration-line: none;
+      background: black;
+    }
+  }
+  &__subtitle {
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 57.14px; /* 142.85% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    .line {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex-grow: 1;
+      span {
+        display: block;
+        height: 1px;
+        background: black;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,9 +1,19 @@
 .container {
-  max-width: 1920px;
+  max-width: 1800px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+@media (max-width: 1800px) {
+  .container {
+    max-width: 1670px;
+  }
+}
+@media (max-width: 1670px) {
+  .container {
+    max-width: 1440px;
+  }
 }
 @media (max-width: 1440px) {
   .container {
