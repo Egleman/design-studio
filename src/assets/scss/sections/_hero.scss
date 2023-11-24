@@ -1,6 +1,6 @@
 .hero {
   min-height: 1035px;
-  background: url("../images/backgrounds/hero-bg-2.jpg") center/cover no-repeat;
+  background: url("~@/assets/images/backgrounds/hero-bg-2.jpg") center/cover no-repeat;
   display: flex;
   &__wrapper {
     padding: 250px 0 0 0;
@@ -343,7 +343,7 @@
 }
 @media (max-width: 1022px) {
   .hero {
-    background: url("../images/backgrounds/hero-bg-3.jpeg") center/cover no-repeat;
+    background: url("~@/assets/images/backgrounds/hero-bg-3.jpeg") center/cover no-repeat;
     min-height: initial;
     &__wrapper {
       padding: 135px 0 50px 0;

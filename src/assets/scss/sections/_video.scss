@@ -1,7 +1,7 @@
 .video {
   padding: 75px 0 50px 0;
   &__wrapper {
-    background: url("../images/backgrounds/video-bg.png") center / contain no-repeat;
+    background: url("~@/assets/images/backgrounds/video-bg.png") center / contain no-repeat;
     position: relative;
     padding: 60px 0;
   }
@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../images/backgrounds/video-link-bg.jpg") center/cover no-repeat;
+    background: url("~@/assets/images/backgrounds/video-link-bg.jpg") center/cover no-repeat;
     box-shadow: 0px 120px 100px -50px rgba(0, 0, 0, 0.25);
   }
 }

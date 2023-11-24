@@ -43,7 +43,8 @@
   }
 }
 .header.active {
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #fff;
   .header__wrapper {
     min-height: initial;
   }

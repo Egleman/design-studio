@@ -16,7 +16,7 @@ export type TCard = {
     className: string,
     image: any
 }
-export const firstCards = ref<TCard[]>([
+export const firstCards: TCard[] = [
     {
         text: 'Разработать <span>проект дома,</span> а также <span>дизайн помещений</span> в нем.',
         className: 'black',
@@ -28,7 +28,7 @@ export const firstCards = ref<TCard[]>([
         image: image2
     },
     {
-        text: 'Подобрать, закупить и доставить для вас <span>самым выгоднымценам</span> строительныеотделочныематериалы.',
+        text: 'Подобрать, закупить и доставить для вас <span>по самым выгодным ценам</span> строительные и отделочные материалы.',
         className: 'white',
         image: image3
     },
@@ -42,9 +42,9 @@ export const firstCards = ref<TCard[]>([
         className: 'white',
         image: image5
     }
-])
+]
 
-export const secondCards = ref<TCard[]>([
+export const secondCards: TCard[] = [
     {
         text: 'Провести замеры и разработать дизайн квартиры и все необходимые чертежи.',
         className: 'black',
@@ -70,4 +70,4 @@ export const secondCards = ref<TCard[]>([
         className: 'black',
         image: image10
     }
-])
+]

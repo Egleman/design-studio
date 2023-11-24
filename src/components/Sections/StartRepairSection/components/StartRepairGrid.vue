@@ -1,8 +1,10 @@
 <template>
   <div class="repair__grid">
-    <div class="repair__card" v-for="(card, index) in cards" :key="index">
+    <div :class="`repair__card repair__card_${index + 1}`" v-for="(card, index) in cards" :key="index">
       <p :class="`repair__card-text ${card.className}`" v-html="card.text"></p>
-      <img :src="card.image" alt="image">
+      <div class="repair__card-image">
+        <img :src="card.image" alt="image">
+      </div>
     </div>
   </div>
 </template>

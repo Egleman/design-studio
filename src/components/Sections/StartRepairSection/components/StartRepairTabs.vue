@@ -7,10 +7,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const emit = defineEmits(['update:ModelValue']);
+const emit = defineEmits(['update:modelValue']);
 const activeTab = ref(0);
 const setTab = (tab: number) => {
   activeTab.value = tab;
-  emit('update:ModelValue', activeTab.value);
+  emit('update:modelValue', activeTab.value);
 }
 </script>
