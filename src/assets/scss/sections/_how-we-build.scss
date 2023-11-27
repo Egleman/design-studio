@@ -1,0 +1,128 @@
+.how-we-build {
+  padding: 100px 0;
+  &__title {
+    text-align: center;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px; /* 114.286% */
+    margin-bottom: 40px;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    &-link {
+      color: #767676;
+      display: flex;
+      text-align: center;
+      font-family: "Tenor Sans", sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 133.333% */
+      text-decoration-line: underline;
+      text-underline-offset: 20px;
+      transition: .3s all;
+      padding: 20px 30px;
+      border-radius: 50%;
+      &:hover {
+        color: black;
+        text-decoration-line: underline;
+        text-underline-offset: 20px;
+      }
+    }
+    &-link.active {
+      color: white;
+      text-decoration: none;
+      background: black;
+
+    }
+  }
+  &__content {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    &-text {
+      color: black;
+      font-size: 20px;
+      padding: 10px;
+      background: #fff;
+      display: flex;
+      position: absolute;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    &-text.before {
+      left: 20px;
+      top: 20px;
+      border-radius: 50%;
+    }
+    &-text.affter {
+      right: 20px;
+      top: 20px;
+    }
+    .rendered {
+      width: 100%;
+    }
+  }
+  &__image {
+    width: 100%;
+    max-height: 780px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 1230px) {
+  .how-we-build {
+    &__tabs {
+      &-link {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1022px) {
+  .how-we-build {
+    &__title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    &__tabs {
+      flex-direction: column;
+      gap: 10px;
+      &-link {
+        font-size: 22px;
+        line-height: 26px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+@media (max-width: 606px) {
+  .how-we-build {
+    padding: 50px 0;
+    &__title {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    &__tabs {
+      &-link {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &__content {
+      border-radius: 20px;
+    }
+    &__image {
+      border-radius: 20px;
+    }
+  }
+}
