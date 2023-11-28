@@ -14,7 +14,7 @@
   </section>
   <teleport to="body">
     <transition name="fade">
-      <VideoModal v-model="modal" v-if="modal"/>
+      <VideoModal v-model="modal" v-if="modal" url="https://www.youtube.com/embed/STVC6gMXyIA?si=hKtxdeT1DW9jO5jl"/>
     </transition>
   </teleport>
 </template>

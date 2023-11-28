@@ -1,0 +1,36 @@
+.footer {
+  padding: 25px 0;
+  background: #181818;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 115px;
+    }
+    div {
+      color: #FFF;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 25px; /* 147.059% */
+    }
+  }
+  &__logo2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      color: #FFF;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 17px; /* 100% */
+    }
+  }
+}
