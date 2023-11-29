@@ -35,3 +35,128 @@
     }
   }
 }
+
+.offcanvas {
+  -webkit-overflow-scrolling: touch;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: hsla(0,0%,9%,.95);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  padding-top: 50px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__phone {
+    transition: .3s all;
+    color: #fff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    p {
+      color: #fff;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    &-link {
+      display: flex;
+      justify-content: center;
+      padding: 18px 0;
+      color: #fff;
+      font-size: 30px;
+      line-height: 40px;
+      //text-decoration: underline;
+      //text-underline-offset: 20px;
+      transition: .3s all;
+      &:hover {
+        color: rgba(255, 255, 255, .5);
+        text-decoration: underline;
+      }
+    }
+    &-item {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 50px;
+        background: rgba(255, 255, 255, .5);
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
+@media (max-width: 1230px) {
+  .offcanvas {
+    &__phone {
+      font-size: 20px;
+      line-height: 24px;
+      svg {
+        width: 20px;
+      }
+    }
+    &__address {
+      svg {
+        width: 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+@media (max-width: 798px) {
+  .offcanvas {
+    &__address {
+      display: none;
+    }
+  }
+}
+@media (max-width: 606px) {
+  .offcanvas {
+    &__header {
+      margin-bottom: 30px;
+    }
+    &__list {
+      &-link {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+  }
+}

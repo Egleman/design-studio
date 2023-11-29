@@ -16,6 +16,7 @@
   <DividerSection/>
   <ReviewsSection/>
   <ContactsSection/>
+  <FooterApp/>
 </template>
 <script setup lang="ts">
 import HeaderApp from "@/components/HeaderApp/HeaderApp.vue";
@@ -35,4 +36,5 @@ import FaqSection from "@/components/Sections/FaqSection/FaqSection.vue";
 import DividerSection from "@/components/Sections/DividerSection/DividerSection.vue";
 import ReviewsSection from "@/components/Sections/ReviewsSection/ReviewsSection.vue";
 import ContactsSection from "@/components/Sections/ContactsSection/ContactsSection.vue";
+import FooterApp from "@/components/FooterApp/FooterApp.vue";
 </script>

@@ -2,7 +2,7 @@
   <header :class="`header ${activeClass}`" ref="headerRef">
     <div class="container">
       <div class="header__wrapper">
-        <a href="#" class="header__burger">
+        <a href="#" class="header__burger" @click.prevent="burger = true">
           <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M31.6667 12.1667H8.33331M31.6667 20.5H8.33331M31.6667 28.8333H8.33331" stroke="white" stroke-width="1.25" stroke-linecap="round"/>
           </svg>
@@ -20,15 +20,22 @@
       </div>
     </div>
   </header>
+  <teleport to="body">
+    <transition name="fade">
+      <BurgerMenuModal v-model="burger" v-if="burger"/>
+    </transition>
+  </teleport>
 </template>
 <script setup lang="ts">
 import headerLogo from "@/assets/images/icons/header-logo.svg";
 import {onMounted, onUnmounted, ref} from "vue";
 import { useMinWidthBody } from "@/customHook/useMinWidthBody";
+import BurgerMenuModal from "@/components/Modals/BurgerMenuModal.vue";
 
 const headerRef = ref<HTMLElement | null>(null);
 const { scrollWidth } = useMinWidthBody();
 const activeClass = ref('');
+const burger = ref(false);
 const checkPositionScroll = () => {
   if (window.scrollY > 0) {
     activeClass.value = 'active';

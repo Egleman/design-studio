@@ -62,14 +62,6 @@ onMounted(() => {
         nextEl: nextBtn.value,
         prevEl: prevBtn.value,
       },
-      breakpoints: {
-        0: {
-          autoHeight: true
-        },
-        1022: {
-          autoHeight: false
-        }
-      }
     });
   }
 })
