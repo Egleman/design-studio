@@ -5,6 +5,7 @@
   box-sizing: border-box;
   z-index: 100;
   transition: .3s all;
+  background: rgba(0, 0, 0, .9);
   &__wrapper {
     position: relative;
     display: flex;
@@ -41,6 +42,9 @@
     align-items: center;
     gap: 5px;
   }
+}
+.header.no-black {
+  background: transparent;
 }
 .header.sticky {
   position: sticky;
@@ -84,9 +88,16 @@
       }
     }
   }
+  .header.no-black {
+    background: rgba(0, 0, 0, .8);
+  }
+  .header.active {
+    background: rgba(0, 0, 0, 1);
+  }
 }
 @media (max-width: 606px) {
   .header {
+    background: rgba(0, 0, 0, 1);
     &__logo {
       position: static;
       transform: translate(0, 0);
@@ -94,5 +105,11 @@
     &__phone {
       display: none;
     }
+  }
+  .header.no-black {
+    background: rgba(0, 0, 0, 1);
+  }
+  .header.active {
+    background: rgba(0, 0, 0, 1);
   }
 }

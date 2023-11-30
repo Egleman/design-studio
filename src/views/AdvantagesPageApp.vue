@@ -1,6 +1,6 @@
 <template>
-  <HeaderApp :sticky="true"/>
-  <AdvantagesSection/>
+  <HeaderApp/>
+  <AdvantagesSection :calc="true"/>
   <FlexbilitySection/>
   <MoonSection/>
   <ContactsSection/>

@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews">
+  <section class="reviews" :style="`${calc ? `margin-top: ${height}px` : ''}`">
     <div class="container">
       <div class="reviews__wrapper">
         <div class="reviews__header">
@@ -43,14 +43,22 @@
 import 'swiper/css';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import {onMounted, ref} from "vue";
+import {onMounted, ref, toRefs} from "vue";
 import ReviewsSlide from "@/components/Sections/ReviewsSection/components/ReviewsSlide.vue";
 import {ReviewsNamespace} from "@/components/Sections/ReviewsSection/consts/consts";
+import {useCalcHeightBlock} from "@/customHook/useCalcHeightBlock";
+interface Props {
+  calc?: boolean
+}
+const props = withDefaults(defineProps<Props>(), {
+  calc: false,
+})
+const { calc } = toRefs(props);
 const { contents } = ReviewsNamespace;
 const slider = ref<HTMLElement | null>(null);
 const nextBtn = ref<HTMLElement | null>(null);
 const prevBtn = ref<HTMLElement | null>(null);
-
+const { height } = useCalcHeightBlock(document.querySelector('.header'));
 onMounted(() => {
   if (slider.value && nextBtn.value && prevBtn.value) {
     const swiper = new Swiper(slider.value, {

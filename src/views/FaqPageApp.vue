@@ -1,6 +1,6 @@
 <template>
-  <HeaderApp :sticky="true"/>
-  <FaqSection/>
+  <HeaderApp/>
+  <FaqSection :calc="true"/>
   <ContactsSection/>
   <FooterApp/>
   <teleport to="body">

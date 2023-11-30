@@ -1,5 +1,5 @@
 <template>
-  <header :class="`header ${activeClass} ${sticky ? 'sticky' : ''}`" ref="headerRef">
+  <header :class="`header ${activeClass} ${className ? className : ''}`" ref="headerRef">
     <div class="container">
       <div class="header__wrapper">
         <a href="#" class="header__burger" @click.prevent="burger = true">
@@ -32,12 +32,12 @@ import {onMounted, onUnmounted, ref, toRefs} from "vue";
 import { useMinWidthBody } from "@/customHook/useMinWidthBody";
 import BurgerMenuModal from "@/components/Modals/BurgerMenuModal.vue";
 interface Props {
-  sticky?: boolean
+  className?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  sticky: false,
+  className: '',
 })
-const { sticky } = toRefs(props);
+const { className } = toRefs(props);
 
 const headerRef = ref<HTMLElement | null>(null);
 const { scrollWidth } = useMinWidthBody();
@@ -56,7 +56,6 @@ onMounted(() => {
     headerRef.value.style.minWidth = `${320 - scrollWidth}px`;
   }
   window.addEventListener('scroll', checkPositionScroll);
-
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', checkPositionScroll);

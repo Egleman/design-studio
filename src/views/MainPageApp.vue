@@ -1,5 +1,5 @@
 <template>
-  <HeaderApp/>
+  <HeaderApp className="no-black"/>
   <HeroSection/>
   <VideoSection/>
   <StartRepairSection/>
