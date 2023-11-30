@@ -1,5 +1,5 @@
 <template>
-  <header :class="`header ${activeClass}`" ref="headerRef">
+  <header :class="`header ${activeClass} ${sticky ? 'sticky' : ''}`" ref="headerRef">
     <div class="container">
       <div class="header__wrapper">
         <a href="#" class="header__burger" @click.prevent="burger = true">
@@ -28,9 +28,16 @@
 </template>
 <script setup lang="ts">
 import headerLogo from "@/assets/images/icons/header-logo.svg";
-import {onMounted, onUnmounted, ref} from "vue";
+import {onMounted, onUnmounted, ref, toRefs} from "vue";
 import { useMinWidthBody } from "@/customHook/useMinWidthBody";
 import BurgerMenuModal from "@/components/Modals/BurgerMenuModal.vue";
+interface Props {
+  sticky?: boolean
+}
+const props = withDefaults(defineProps<Props>(), {
+  sticky: false,
+})
+const { sticky } = toRefs(props);
 
 const headerRef = ref<HTMLElement | null>(null);
 const { scrollWidth } = useMinWidthBody();
@@ -48,7 +55,8 @@ onMounted(() => {
   if (headerRef.value) {
     headerRef.value.style.minWidth = `${320 - scrollWidth}px`;
   }
-  window.addEventListener('scroll', checkPositionScroll)
+  window.addEventListener('scroll', checkPositionScroll);
+
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', checkPositionScroll);

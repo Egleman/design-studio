@@ -29,22 +29,29 @@
       </div>
       <ul class="offcanvas__list">
         <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">3 минуты о нас (видео)</a>
+          <router-link to="/stages" class="offcanvas__list-link">
+            Этапы строительства
+          </router-link>
         </li>
         <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">Что мы можем?</a>
+          <router-link to="/portfolio" class="offcanvas__list-link">
+            Портфолио
+          </router-link>
         </li>
         <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">Для кого?</a>
+          <router-link to="/advantages" class="offcanvas__list-link">
+            Наши преимущества
+          </router-link>
         </li>
         <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">Чем мы лучше других</a>
+          <router-link to="/faq" class="offcanvas__list-link">
+            Частые вопросы
+          </router-link>
         </li>
         <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">Преимущества</a>
-        </li>
-        <li class="offcanvas__list-item">
-          <a href="#" class="offcanvas__list-link">Контакты</a>
+          <router-link to="/reviews" class="offcanvas__list-link">
+            Отзывы
+          </router-link>
         </li>
       </ul>
     </div>
