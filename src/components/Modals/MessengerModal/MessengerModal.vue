@@ -3,7 +3,7 @@
     <div class="modal-chat" v-if="activeModal">
       <div class="modal-chat__header">
         <div class="modal-chat__title">Спросите специалиста</div>
-        <a href="#" class="modal-chat__close">
+        <a href="#" class="modal-chat__close" @click.prevent="activeModal = false">
           <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 37.64L37 1.64001" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M1 1.64001L37 37.64" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
